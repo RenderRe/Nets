@@ -1,0 +1,28 @@
+﻿<Window x:Class="задание_2_wpf.window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:задание_2_wpf"
+        mc:Ignorable="d"
+        Title="window" Height="350" Width="525" MinWidth="525" MinHeight="350" MaxWidth="525" MaxHeight="350">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="218*"/>
+            <ColumnDefinition Width="299*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox Name="TovaryList" HorizontalAlignment="Left" Width="200" Grid.Column="0" Height="300" Margin="10,10,0,10" SelectionChanged="TovaryList_SelectionChanged"></ListBox>
+        <GroupBox Grid.Column="1" Header="Данные о виде">
+            <StackPanel>
+                <TextBlock Text="Наименование"></TextBlock>
+                <TextBox Name="textBoxName" Margin="0,10" Width="200" HorizontalAlignment="Left"></TextBox>
+                <StackPanel Orientation="Horizontal" Margin="0,90,87,0">
+                    <Button Content="Сохранить" Width="89" Name="Save" Margin="0,0,10,0" Click="Save_Click"></Button>
+                    <Button Content="Удалить" Width="90" Name="Delete" Click="Delete_Click"></Button>
+                </StackPanel>
+                <Button Margin="0,10" Content="Создать новую запись" HorizontalAlignment="Left" Width="200" Name="New" Click="New_Click"></Button>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</Window>
+
